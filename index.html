@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Board de tarefas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <main>
+    <header>
+      <h1>Board de tarefas</h1>
+    </header>
+
+    <form id="task-form">
+      <input
+        type="text"
+        id="task-name"
+        name="task-name"
+        placeholder="Nome da tarefa"
+        required
+      />
+      <input
+        type="text"
+        id="task-label"
+        name="task-label"
+        placeholder="Etiqueta"
+        required
+      />
+      <button type="submit" class="add-button" aria-label="Adicionar tarefa">+</button>
+    </form>
+
+    <section class="tasks" id="task-list" aria-live="polite"></section>
+
+    <footer>
+      <span id="task-counter">0 tarefas concluídas</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
